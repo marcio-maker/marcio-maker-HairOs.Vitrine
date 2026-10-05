@@ -401,14 +401,19 @@
 
 <script>
 /* ============================================
+   ML_LINKS — FONTE ÚNICA DE LINKS DE AFILIADO
+   ============================================ */
+const ML_LINKS = {
+  keune:       "https://meli.la/1GbiW7M",
+  inoa:        "https://meli.la/28LpPj2",
+  kerastase:   "https://meli.la/1MwSY7v",
+  expert:      "https://meli.la/2nmeunk",
+  joico:       "https://meli.la/2x9xqBe",
+  ferramentas: "https://meli.la/2H5F4mn"
+};
+
+/* ============================================
    DADOS — NARRATIVA ENXUTA
-   
-   Estrutura:
-   • FRENTE → Corte + o que valoriza no rosto (visagismo)
-   • LADO   → Movimento e caimento no perfil
-   • ATRÁS  → Acabamento e fechamento
-   
-   Produtos e marcas ficam apenas nos kits.
    ============================================ */
 const cortes = [
   {id:1,nome:"Long Bob Ondulado",
@@ -419,9 +424,9 @@ const cortes = [
      atras:"Por trás, o corte mantém o comprimento com ondas uniformes e um acabamento elegante que valoriza o movimento natural do cabelo."
    },
    kit:[
-     {nome:"Finalizador de ondas — Kérastase Elixir Ultime", razao:"Define o ondulado sem pesar o cabelo", link:"https://mercadolivre.com.br/EXEMPLO1"},
-     {nome:"Sérum antifrizz — L'Oréal Absolut Repair Molecular", razao:"Controla o frizz ao longo do dia", link:"https://mercadolivre.com.br/EXEMPLO2"},
-     {nome:"Escova modeladora profissional", razao:"Dá volume na raiz sem danificar", link:"https://mercadolivre.com.br/EXEMPLO3"}
+     {nome:"Leave-In Elixir Ultime — Kérastase", razao:"Define as ondas do bob sem pesar, mantendo o movimento natural do comprimento", link:ML_LINKS.kerastase},
+     {nome:"Máscara Intensa — Joico", razao:"Hidratação profunda para as pontas onduladas não perderem forma ao longo do dia", link:ML_LINKS.joico},
+     {nome:"Babyliss Cerâmica — Ferramentas", razao:"Modela as ondas do bob com calor uniforme, sem danificar a fibra", link:ML_LINKS.ferramentas}
    ],
    imagens:{frente:"imagens/corte01-frente.png",lado:"imagens/corte01-lado.png",atras:"imagens/corte01-atras.png"}},
 
@@ -433,9 +438,9 @@ const cortes = [
      atras:"Na parte de trás, as camadas sobrepostas garantem volume controlado e um caimento naturalmente texturizado."
    },
    kit:[
-     {nome:"Pomada texturizante — Joico Style & Finish", razao:"Cria o efeito despojado das camadas", link:"https://mercadolivre.com.br/EXEMPLO4"},
-     {nome:"Spray de sal marinho — Joico Beach Spray", razao:"Textura de praia sem rigidez", link:"https://mercadolivre.com.br/EXEMPLO5"},
-     {nome:"Leave-in leve — Kérastase Nutritive", razao:"Hidrata sem tirar o movimento", link:"https://mercadolivre.com.br/EXEMPLO1"}
+     {nome:"Leave-In K-PAK — Joico", razao:"Textura leve que valoriza as camadas repicadas sem deixar duro", link:ML_LINKS.joico},
+     {nome:"Shampoo Vitamino Color — L'Oréal Expert", razao:"Limpa sem tirar o volume natural das camadas desfiadas", link:ML_LINKS.expert},
+     {nome:"Escova Rotativa Mondial — Ferramentas", razao:"Dá corpo e movimento na raiz do shag sem esforço", link:ML_LINKS.ferramentas}
    ],
    imagens:{frente:"imagens/corte02-frente.png",lado:"imagens/corte02-lado.png",atras:"imagens/corte02-atras.png"}},
 
@@ -447,9 +452,9 @@ const cortes = [
      atras:"Na nuca, textura e volume mantêm o formato arredondado e moderno por todos os ângulos."
    },
    kit:[
-     {nome:"Pomada de fixação média — Joico JoiFull", razao:"Segura o volume sem deixar duro", link:"https://mercadolivre.com.br/EXEMPLO2"},
-     {nome:"Spray de volume — Joico JoiFull", razao:"Levanta a raiz do topo", link:"https://mercadolivre.com.br/EXEMPLO3"},
-     {nome:"Texturizador em pó — L'Oréal Professionnel", razao:"Dá corpo sem oleosidade", link:"https://mercadolivre.com.br/EXEMPLO4"}
+     {nome:"Sérum Pro Longer — L'Oréal Expert", razao:"Fortalece os fios curtos e dá brilho no topo texturizado", link:ML_LINKS.expert},
+     {nome:"Shampoo Moisture Recovery — Joico", razao:"Hidratação leve que mantém o volume natural do pixie", link:ML_LINKS.joico},
+     {nome:"Difusor Universal — Ferramentas", razao:"Espalha o calor por igual e preserva a textura bagunçada do topo", link:ML_LINKS.ferramentas}
    ],
    imagens:{frente:"imagens/corte03-frente.png",lado:"imagens/corte03-lado.png",atras:"imagens/corte03-atras.png"}},
 
@@ -461,9 +466,9 @@ const cortes = [
      atras:"Por trás, a nuca em degradê mantém a linha do undercut definida, com o topo estratégico garantindo o caimento."
    },
    kit:[
-     {nome:"Máquina de corte profissional", razao:"Para manter o undercut em casa", link:"https://mercadolivre.com.br/EXEMPLO5"},
-     {nome:"Pomada de fixação forte — Joico Style & Finish", razao:"Modela a franja jogada de lado", link:"https://mercadolivre.com.br/EXEMPLO1"},
-     {nome:"Óleo capilar leve — Kérastase Elixir Ultime", razao:"Brilho no topo sem pesar", link:"https://mercadolivre.com.br/EXEMPLO2"}
+     {nome:"Máquina de Corte Wahl — Ferramentas", razao:"Mantém o undercut alinhado em casa, com acabamento profissional", link:ML_LINKS.ferramentas},
+     {nome:"Condicionador Absolut Repair — L'Oréal Expert", razao:"Recupera os fios do topo longo após o calor da máquina", link:ML_LINKS.expert},
+     {nome:"Máscara Genesis — Kérastase", razao:"Fortalece a raiz para o contraste raspado × longo durar mais", link:ML_LINKS.kerastase}
    ],
    imagens:{frente:"imagens/corte04-frente.png",lado:"imagens/corte04-lado.png",atras:"imagens/corte04-atras.png"}},
 
@@ -475,9 +480,9 @@ const cortes = [
      atras:"Na parte de trás, ondas texturizadas e camadas garantem leveza e um caimento perfeito."
    },
    kit:[
-     {nome:"Ondulador profissional 25mm", razao:"Cria as ondas soltas do bob", link:"https://mercadolivre.com.br/EXEMPLO3"},
-     {nome:"Mousse modeladora — Joico Style & Finish", razao:"Define a onda sem endurecer", link:"https://mercadolivre.com.br/EXEMPLO4"},
-     {nome:"Spray de brilho — Kérastase Elixir Ultime", razao:"Acabamento de salão em casa", link:"https://mercadolivre.com.br/EXEMPLO5"}
+     {nome:"Taiff Modelador Curves — Ferramentas", razao:"Cria as ondas soltas do bob com 25mm e calor controlado", link:ML_LINKS.ferramentas},
+     {nome:"Leave-In Elixir Ultime — Kérastase", razao:"Sela as ondas texturizadas e dá brilho de salão", link:ML_LINKS.kerastase},
+     {nome:"Máscara Nutrioil — L'Oréal Expert", razao:"Nutre as camadas do bob sem perder o movimento", link:ML_LINKS.expert}
    ],
    imagens:{frente:"imagens/corte05-frente.png",lado:"imagens/corte05-lado.png",atras:"imagens/corte05-atras.png"}},
 
@@ -489,9 +494,9 @@ const cortes = [
      atras:"Por trás, as camadas sobrepostas garantem volume e um caimento fluido, mantendo a elegância por todos os lados."
    },
    kit:[
-     {nome:"Escova redonda profissional", razao:"Modela as camadas com movimento", link:"https://mercadolivre.com.br/EXEMPLO1"},
-     {nome:"Protetor térmico — Kérastase Nutritive", razao:"Protege antes do secador", link:"https://mercadolivre.com.br/EXEMPLO2"},
-     {nome:"Finalizador leve — L'Oréal Professionnel", razao:"Mantém o movimento sem pesar", link:"https://mercadolivre.com.br/EXEMPLO3"}
+     {nome:"Escova Térmica Evas — Ferramentas", razao:"Modela as camadas médias com movimento e brilho", link:ML_LINKS.ferramentas},
+     {nome:"Condicionador Resistance — Kérastase", razao:"Desembaraça as camadas longas sem quebrar os fios", link:ML_LINKS.kerastase},
+     {nome:"Shampoo Moisture Recovery — Joico", razao:"Hidrata da raiz às pontas para as camadas caírem fluido", link:ML_LINKS.joico}
    ],
    imagens:{frente:"imagens/corte06-frente.png",lado:"imagens/corte06-lado.png",atras:"imagens/corte06-atras.png"}},
 
@@ -503,9 +508,9 @@ const cortes = [
      atras:"Na nuca, camadas texturizadas e pontas desfiadas mantêm o estilo solto e cheio de personalidade."
    },
    kit:[
-     {nome:"Cera texturizante — Joico K-PAK", razao:"Destaca as camadas desfiadas", link:"https://mercadolivre.com.br/EXEMPLO4"},
-     {nome:"Spray de sal — Joico Beach Spray", razao:"Textura solta sem endurecer", link:"https://mercadolivre.com.br/EXEMPLO5"},
-     {nome:"Pomada leve — L'Oréal Professionnel", razao:"Finaliza o topo com naturalidade", link:"https://mercadolivre.com.br/EXEMPLO1"}
+     {nome:"Máscara Intensa — Joico", razao:"Texturiza o shag curto e destaca as pontas desfiadas", link:ML_LINKS.joico},
+     {nome:"Sérum Pro Longer — L'Oréal Expert", razao:"Dá brilho e controla o frizz das camadas curtas", link:ML_LINKS.expert},
+     {nome:"Escova de Cerdas Naturais — Ferramentas", razao:"Finaliza o topo com volume natural e sem eletricidade", link:ML_LINKS.ferramentas}
    ],
    imagens:{frente:"imagens/corte07-frente.png",lado:"imagens/corte07-lado.png",atras:"imagens/corte07-atras.png"}}
 ];
@@ -698,7 +703,6 @@ let corteAtual = 0, anguloAtual = 0, ultimoFoco = null;
 let zoomAtivo = false;
 aplicarFallback(imgModal);
 
-/* ===== AUTO-HIDE SIMPLES ===== */
 let uiTimer = null;
 function mostrarUI(){
   modal.classList.remove("ui-oculta");
@@ -721,7 +725,6 @@ function resetZoom(){
   modalStage.classList.remove("zoom-ativo");
 }
 
-/* ===== FUNÇÃO MOSTRAR ===== */
 function mostrar(ci, ai, animar){
   corteAtual = ci;
   anguloAtual = (ai + ORDEM_ANGULOS.length) % ORDEM_ANGULOS.length;
@@ -747,7 +750,6 @@ function mostrar(ci, ai, animar){
   tag.textContent = rotulo;
   modalTitulo.appendChild(tag);
 
-  /* ===== NARRATIVA POR ÂNGULO ===== */
   const descricaoPorAngulo = corte.descricoes && corte.descricoes[angulo];
   modalDesc.textContent = descricaoPorAngulo || corte.descricao;
 
@@ -778,7 +780,6 @@ function mostrar(ci, ai, animar){
   kitBox.hidden = itensKit.length === 0;
   document.getElementById("modalCta").hidden = itensKit.length === 0;
 
-  /* === THUMBS === */
   if (modalThumbs.children.length !== ORDEM_ANGULOS.length){
     modalThumbs.replaceChildren();
     ORDEM_ANGULOS.forEach((a, i) => {
@@ -914,6 +915,65 @@ document.addEventListener("DOMContentLoaded", function(){
   setTimeout(() => { tempoMinimo = true; atualizar(); }, 1400);
   setTimeout(finish, 4000);
 });
+</script>
+
+<!-- ============================================
+     PATCH FINAL — CORRIGE QUALQUER EXEMPLO* E AVISA NO CONSOLE
+     ============================================ -->
+<script>
+(function(){
+  var REAL = {
+    kerastase:   "https://meli.la/1MwSY7v",
+    joico:       "https://meli.la/2x9xqBe",
+    expert:      "https://meli.la/2nmeunk",
+    ferramentas: "https://meli.la/2H5F4mn",
+    keune:       "https://meli.la/1GbiW7M",
+    inoa:        "https://meli.la/28LpPj2"
+  };
+
+  function escolherLink(txt){
+    var t = (txt || "").toLowerCase();
+    if (/kerastase|elixir ultime|genesis|nutritive|resistance/.test(t)) return REAL.kerastase;
+    if (/joico|k-?pak|moisture recovery|máscara intensa|mascara intensa/.test(t)) return REAL.joico;
+    if (/expert|vitamino|absolut repair|nutrioil|pro longer/.test(t)) return REAL.expert;
+    if (/keune/.test(t)) return REAL.keune;
+    if (/inoa|dia.?color/.test(t)) return REAL.inoa;
+    if (/babyliss|taiff|escova|difusor|m[aá]quina|tesoura|wahl|ferramenta/.test(t)) return REAL.ferramentas;
+    return null;
+  }
+
+  function corrigir(){
+    var links = document.querySelectorAll("a.kit-link, a[href*='EXEMPLO'], a[href*='mercadolivre.com.br/EXEMPLO']");
+    var corrigidos = 0;
+    links.forEach(function(a){
+      var novo = escolherLink(a.textContent);
+      if (novo && a.href !== novo){
+        a.setAttribute("href", novo);
+        corrigidos++;
+      }
+    });
+    return corrigidos;
+  }
+
+  function verificar(){
+    var temExemplo = document.body.innerHTML.indexOf("EXEMPLO") !== -1;
+    console.log("%c[HairOS] Verificação de links", "color:#d4b07a;font-weight:bold");
+    console.log("  ML_LINKS carregado:", typeof ML_LINKS !== "undefined" ? "SIM" : "NÃO");
+    if (typeof ML_LINKS !== "undefined") console.log("  Links:", ML_LINKS);
+    console.log("  Contém 'EXEMPLO' no HTML?", temExemplo ? "⚠️ SIM" : "✅ NÃO");
+    var c = corrigir();
+    if (c > 0) console.log("  Links corrigidos agora:", c);
+    console.log("  Pronto. Se ainda abrir EXEMPLO, há outro arquivo na pasta.");
+  }
+
+  if (document.readyState === "complete") verificar();
+  else window.addEventListener("load", verificar);
+
+  try {
+    var obs = new MutationObserver(function(){ corrigir(); });
+    obs.observe(document.body, { childList: true, subtree: true });
+  } catch(e) {}
+})();
 </script>
 </body>
 </html>
